@@ -1,0 +1,19 @@
+@using PackerTracker.Models;
+
+<h1>Results</h1>
+
+@if (@Model.Count == 0)
+{
+  <p>There are no packs in the list.</p>
+} 
+<ul>
+  @foreach (Pack pack in Model)
+  {  
+    <li><a href="/pack/@pack.Id">ID: @pack.Id</a> Has what you need @pack.Check()</li>
+  }
+</ul>
+<a href="/pack/new">Add a new pack.</a>
+
+<form action="/pack/delete" method="post">
+  <button type="submit" name="button">Clear All Items</button>
+</form>

@@ -1,0 +1,19 @@
+@model PackerTracker.Models.Pack;
+
+<h1>Results</h1>
+
+@if (@Model.Check())
+{
+  <p>All components accounted for</p>
+} else if (@Model.Check() == false) {
+  <p>Missing items</p>
+}
+@* <ul>
+  @foreach (Pack item in Pack)
+  {
+    if (item == false)
+    {
+      <li></li>
+    }
+  }
+</ul> *@
