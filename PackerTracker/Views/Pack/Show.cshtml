@@ -8,12 +8,20 @@
 } else if (@Model.Check() == false) {
   <p>Missing items</p>
 }
-@* <ul>
-  @foreach (Pack item in Pack)
-  {
-    if (item == false)
-    {
-      <li></li>
-    }
-  }
-</ul> *@
+
+@if (@Model.Food == false)
+{
+  <p>no Food</p>
+}
+@if (@Model.Tent == false)
+{
+  <p>no Tent</p>
+}
+@if (@Model.Water == false)
+{
+  <p>no Water</p>
+}
+@if (@Model.BloodSacrifice == false)
+{
+  <p>no BloodSacrifice</p>
+}
